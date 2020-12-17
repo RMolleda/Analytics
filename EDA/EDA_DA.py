@@ -23,3 +23,11 @@ def impScraping():
     import pandas as pd 
     import selenium as sl
 
+def fix_date(x):
+    import datetime
+    #change the "1989" for the .max()/.min() value.
+    if x.year > 1989:
+        year = x.year - 100
+    else:
+        year = x.year
+    return datetime.date(year,x.month,x.day)
